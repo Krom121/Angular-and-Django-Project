@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarService } from '../car.service';
 
 
 const NAVIGATION = [
@@ -19,9 +20,15 @@ const NAVIGATION = [
 
 export class SummaryComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private car: CarService) { }
 
   ngOnInit() {
+  }
+
+  get totalPrice(){
+    return this.car.model.base_price + this.car.order.engine.price;
   }
 
   goNext() {

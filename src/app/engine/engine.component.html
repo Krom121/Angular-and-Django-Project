@@ -1,3 +1,12 @@
-<p>
-  engine works!
-</p>
+<div class="row">
+  <div class="col-md-9 text-center">
+    <img src="{{ car.order.engine.image }}">
+  </div>
+  <div class="col-md-3">
+    <button *ngFor="let engine of car.model.engines" 
+    [class]="'btn btn-small btn-block btn-outline-' + (car.order.engine == engine ? 'danger' : 'dark')"
+    (click)="car.order.engine = engine">
+        {{ engine.name }}
+    </button>
+  </div>
+</div>
