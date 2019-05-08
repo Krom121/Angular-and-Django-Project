@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-exterior',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExteriorComponent implements OnInit {
 
-  constructor() { }
+  constructor(public car: CarService) { }
 
   ngOnInit() {
   }

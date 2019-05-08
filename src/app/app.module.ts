@@ -11,6 +11,9 @@ import { InteriorComponent } from './interior/interior.component';
 import { AutopilotComponent } from './autopilot/autopilot.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SummaryComponent } from './summary/summary.component';
+import { PreviewComponent } from './preview/preview.component';
+import { ColorpickComponent } from './colorpick/colorpick.component';
+import { BarComponent } from './colorpick/bar/bar.component';
 
 
 // Routes--------
@@ -33,7 +36,10 @@ const appRoutes: Routes = [
     InteriorComponent,
     AutopilotComponent,
     PaymentComponent,
-    SummaryComponent
+    SummaryComponent,
+    PreviewComponent,
+    ColorpickComponent,
+    BarComponent
   ],
   imports: [
     BrowserModule,
