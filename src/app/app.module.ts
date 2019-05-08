@@ -8,6 +8,7 @@ import { ExteriorComponent } from './exterior/exterior.component';
 import { InteriorComponent } from './interior/interior.component';
 import { AutopilotComponent } from './autopilot/autopilot.component';
 import { PaymentComponent } from './payment/payment.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PaymentComponent } from './payment/payment.component';
     ExteriorComponent,
     InteriorComponent,
     AutopilotComponent,
-    PaymentComponent
+    PaymentComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
