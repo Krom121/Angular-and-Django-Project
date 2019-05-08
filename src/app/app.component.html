@@ -2,23 +2,28 @@
 
 <nav class="navbar navbar-dark bg-dark">
   <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="/engine">Engine</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/engine">Engine</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/exterior">Exterior</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/exterior">Exterior</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/interior">Interior</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/interior">Interior</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/autopilot">Autopilot</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/autopilot">Autopilot</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/payment">Payment</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/payment">Payment</a>
     </li>
   </ul>
 </nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
 
 
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <app-summary></app-summary>
+</div>
