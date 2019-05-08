@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EngineComponent } from './engine/engine.component';
 import { ExteriorComponent } from './exterior/exterior.component';
+import { InteriorComponent } from './interior/interior.component';
+import { AutopilotComponent } from './autopilot/autopilot.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EngineComponent,
-    ExteriorComponent
+    ExteriorComponent,
+    InteriorComponent,
+    AutopilotComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
