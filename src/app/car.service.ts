@@ -22,12 +22,18 @@ export class CarService {
         {id: 1, name: "18", image: "/assets/wheels-18.png", price: 300},
         {id: 2, name: "19", image: "/assets/wheels-19.png", price: 500},
       ],
+      interiors: [
+        {id: 1, name: "Black", image: "/assets/interior-black.png", price: 0},
+        {id: 2, name: "Brown", image: "/assets/interior-brown.png", price: 500},
+      ],
     };
 
     this.order = {
       engine: this.model.engines[0],
       wheels:this.model.wheels[0],
       exterior_color: "#ffffff",
+      interior: this.model.interiors[0],
+      autopilot: false,
     }
 
 

@@ -13,8 +13,16 @@ export interface Wheels {
     price: number,
 }
 
+export interface Interior {
+    id: number;
+    name: string;
+    image: string;
+    price: number,
+}
+
 export interface Model{
     base_price: number;
     engines: Array<Engine>;
     wheels: Array<Wheels>;
+    interiors: Array<Interior>;
 }

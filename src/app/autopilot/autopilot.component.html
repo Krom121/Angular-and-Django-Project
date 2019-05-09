@@ -1,3 +1,14 @@
-<p>
-  autopilot works!
-</p>
+<div class="row">
+  <div class="col-9">
+    <app-preview></app-preview>
+  </div>
+  <div class="col-3">
+    <h4>Autopilot</h4>
+    <label>
+      <input [(ngModel)]="car.order.autopilot" type="checkbox">
+      Autopilot
+      <span *ngIf="car.order.autopilot">Option selected</span>
+      <span *ngIf="!car.order.autopilot">Select option</span>
+    </label>
+  </div>
+</div>
