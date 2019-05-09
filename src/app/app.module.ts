@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarService } from './car.service';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { PreviewComponent } from './preview/preview.component';
 import { ColorpickComponent } from './colorpick/colorpick.component';
 import { BarComponent } from './colorpick/bar/bar.component';
+import { FieldErrorComponent } from './field-error/field-error.component';
 
 
 // Routes--------
@@ -40,13 +41,15 @@ const appRoutes: Routes = [
     SummaryComponent,
     PreviewComponent,
     ColorpickComponent,
-    BarComponent
+    BarComponent,
+    FieldErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

@@ -34,6 +34,13 @@ export class CarService {
       exterior_color: "#ffffff",
       interior: this.model.interiors[0],
       autopilot: false,
+
+      firstname: '',
+      lastname: '',
+      phone: '',
+      email: '',
+      card_number: '',
+      card_date: '',
     }
 
 
