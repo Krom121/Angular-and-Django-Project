@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar navbar-light bg-light">
+  <ul class="nav">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/engine">Engine</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/exterior">Exterior</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/interior">Interior</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/autopilot">Autopilot</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/payment">Payment</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
+
+<div class="container-fluid">
+  <app-summary></app-summary>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="preview">
+<div class="layer" [style.backgroundColor]="car.order.exterior_color"></div>
+<div class="layer" style="background-image: url('/assets/body.png')"></div>
+<div class="layer"
+    [ngStyle]="{'background-image': 'url(\'' + selectedWheelsLayer + '\')'}">
+</div>
+<div class="layer"
+[ngStyle]="{'background-image': 'url(\'' + car.order.interior.image + '\')'}">
+</div>
+<div class="layer" 
+*ngIf="car.order.autopilot" 
+style="background-image: url('/assets/autopilot.png')">
+</div>
+</div>

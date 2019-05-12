@@ -1,0 +1,9 @@
+<p>
+    <color-bar [value]="r" (valueChange)="r=$event; update()"></color-bar>
+    <color-bar [value]="g" (valueChange)="g=$event; update()"></color-bar>
+    <color-bar [value]="b" (valueChange)="b=$event; update()"></color-bar>
+  {{ color }}<br>
+  R = {{ r }}<br>
+  G = {{ g }}<br>
+  B = {{ b }}<br>
+</p>
