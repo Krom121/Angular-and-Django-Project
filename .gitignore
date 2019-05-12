@@ -55,20 +55,5 @@ package-lock.json
 package.json
 
 
-<<<<<<< HEAD
 hello
-=======
-# Django settings
-
-db.sqlite3
-__pycache__
-.pyc
-migrations
-.vscode
-carss
-bin
-include
-lib
-local
-share
->>>>>>> aa127b52ff3f7206680d01476025548a6b203985
+Same project
