@@ -53,3 +53,18 @@ tslint.json
 angular.json
 package-lock.json
 package.json
+
+
+# Django settings
+
+db.sqlite3
+__pycache__
+.pyc
+migrations
+.vscode
+carss
+bin
+include
+lib
+local
+share
