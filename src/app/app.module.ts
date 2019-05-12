@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarService } from './car.service';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { PreviewComponent } from './preview/preview.component';
 import { ColorpickComponent } from './colorpick/colorpick.component';
 import { BarComponent } from './colorpick/bar/bar.component';
 import { FieldErrorComponent } from './field-error/field-error.component';
+import { SelectModelComponent } from './select-model/select-model.component';
 
 
 // Routes--------
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     PreviewComponent,
     ColorpickComponent,
     BarComponent,
-    FieldErrorComponent
+    FieldErrorComponent,
+    SelectModelComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

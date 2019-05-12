@@ -19,11 +19,13 @@
     </li>
   </ul>
 </nav>
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="car.model">
   <router-outlet></router-outlet>
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="car.model">
   <app-summary></app-summary>
 </div>
+
+<app-select-model *ngIf="!car.model"></app-select-model>

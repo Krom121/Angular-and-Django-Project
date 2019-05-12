@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Model } from './car';
 import { Order } from './order';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarService {
 
-  model: Model;
-  order: Order;
+  model: Model = null;
+  order: Order = null;
 
-  constructor() {
+  all_models: Array<Model> = [];
+
+  constructor(private http: HttpClient) {
     //this.model = {
       //base_price: 30000,
      // engines: [
@@ -28,21 +32,34 @@ export class CarService {
       //],
     //};
 
-    //this.order = {
-      //engine: this.model.engines[0],
-      //wheels:this.model.wheels[0],
-      //exterior_color: "#ffffff",
-      //interior: this.model.interiors[0],
-      //autopilot: false,
+   
 
-      //firstname: '',
-      //lastname: '',
-      //phone: '',
-     // email: '',
-      //card_number: '',
-      //card_date: '',
-    //}
+  }
 
+   loadModels(){
+    let url = 'http://localhost:8000/api/models/'
+    this.http.get(url).subscribe((data: Array<Model>) => {
+      this.all_models = data;
+    })
+  }
 
-   }
+  selectModel(model: Model){
+    this.model = model;
+    
+     this.order = {
+      engine: this.model.engines[0],
+      wheels:this.model.wheels[0],
+      exterior_color: "#ffffff",
+      interior: this.model.interiors[0],
+      autopilot: false,
+
+      firstname: '',
+      lastname: '',
+      phone: '',
+      email: '',
+      card_number: '',
+      card_date: '',
+    }
+  }
+
 }
