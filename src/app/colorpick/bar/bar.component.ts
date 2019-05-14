@@ -12,7 +12,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BarComponent implements OnInit {
 
-  private barValue: number;
+  public barValue: number;
 
   constructor() { }
 

@@ -10,7 +10,7 @@ import { CarService } from './car.service';
 export class AppComponent {
   title = 'car-order';
 
-  constructor(private car: CarService) {
+  constructor(public car: CarService) {
     
   }
 }

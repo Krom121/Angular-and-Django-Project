@@ -8,7 +8,7 @@ import { CarService } from '../car.service';
 })
 export class SelectModelComponent implements OnInit {
 
-  constructor(private car: CarService) { }
+  constructor(public car: CarService) { }
 
   ngOnInit() {
     this.car.loadModels()

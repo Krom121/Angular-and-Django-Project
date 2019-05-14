@@ -21,8 +21,8 @@ const NAVIGATION = [
 export class SummaryComponent implements OnInit {
 
   constructor(
-    private router: Router,
-    private car: CarService) { }
+    public router: Router,
+    public car: CarService) { }
 
   ngOnInit() {
   }

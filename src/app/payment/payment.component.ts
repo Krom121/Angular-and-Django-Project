@@ -11,7 +11,7 @@ export class PaymentComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private car: CarService) { }
+  constructor(public car: CarService) { }
 
   ngOnInit() {
     let o = this.car.order;
