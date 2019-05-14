@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Model } from './car';
 import { Order } from './order';
 import { HttpClient } from '@angular/common/http';
+import { environment } from "../environments/environment";
 
 
 @Injectable({
@@ -37,10 +38,28 @@ export class CarService {
   }
 
    loadModels(){
-    let url = 'http://localhost:8000/api/models/'
+    let url = environment.api_base + '/models/'
     this.http.get(url).subscribe((data: Array<Model>) => {
       this.all_models = data;
     })
+  }
+
+  saveOrder() {
+    let newOrder = {}
+    Object.keys(this.order).forEach((k) => {
+      newOrder[k] = this.order[k]
+    })
+    newOrder['wheels'] = newOrder['wheels'].id
+    newOrder['interior'] = newOrder['interior'].id
+    newOrder['engine'] = newOrder['engine'].id
+
+    let url = environment.api_base + '/orders/'
+    this.http.post(url, newOrder).subscribe(
+        data => {
+          alert("Order saved.")
+        },
+        
+    )
   }
 
   selectModel(model: Model){

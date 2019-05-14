@@ -37,4 +37,11 @@ export class PaymentComponent implements OnInit {
     })
   }
 
+  saveOrder(){
+    this.car.saveOrder()
+
+    
+  }
+
+
 }

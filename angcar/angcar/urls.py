@@ -3,10 +3,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.routers import DefaultRouter
-from api.views import CarModelVS
+from api.views import CarModelVS, OrderViewset
 
 router = DefaultRouter()
 router.register(r'models', CarModelVS)
+router.register(r'orders', OrderViewset)
 
 urlpatterns = [
     path('api/', include(router.urls)),

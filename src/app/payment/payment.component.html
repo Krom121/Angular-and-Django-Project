@@ -59,8 +59,11 @@
         </field-error>
       </div>
       </div>
-  <button class="btn btn-success mt-4">Submit Your Order</button>
+    <button *ngIf="form.valid"
+    (click)="saveOrder()"
+    type="submit" 
+      class="btn btn-success mt-4">
+        Submit Your Order
+    </button>
 </form>
 </div>
-
-{{ form.value | json }}
