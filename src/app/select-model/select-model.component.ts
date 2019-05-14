@@ -13,7 +13,7 @@ export class SelectModelComponent implements OnInit {
   ngOnInit() {
     this.car.loadModels()
   }
-  selectModel(model: Model) {
+  selectModel(model) {
     this.car.selectModel(model)
   }
 }
